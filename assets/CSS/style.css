@@ -1,0 +1,14 @@
+@media (max-width:600px){
+    body{
+        
+    }
+    nav{
+        background-image: url(../IMG/Design\ sem\ nome\ 1.png);
+        max-width: 10rem;
+    }
+    ul{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+     }
+}

@@ -1,22 +1,11 @@
-@media(max-width:430px){
-    #Capa {
-        background-image: url(../IMG/Capa.png);
-        width: 100vh;
-        height: 200px;
-    }
-    #botao{
-        display: none;
-    }
-    #logo{
-        display: none;
-    }
-    #titulo{
-        font-size: 10px;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        text-align: center;
-        color: white;
-    }
+#carrousel1 {
+    border: solid 1px black;
+    margin-top: 2%;
+    max-width: 50%;
+    margin-left: 40%;
+    margin-bottom: 10%;
 }
+
 
 
 @media (max-width:842px) {
@@ -25,29 +14,43 @@
     }
 
     #Capa {
-        background-image: url(../IMG/Capa.png);
-        width: 100vh;
+        background-image: url(../IMG/Capa\ Celular.png);
+        width: 100rem;
         height: 200px;
     }
-    #logo{
+
+    #logo {
         display: none;
     }
-    #titulo{
+
+    #titulo {
+        font-size: 100px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: left;
+        color: red;
+        margin-bottom: 0%;
+    }
+
+    #titulo1 {
+        margin-left: 50%;
+        margin-top: 0 auto;
         font-size: 100px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         text-align: center;
-        color: white;
+        color: red;
     }
-    #botao{
+
+    #botao {
         display: none;
     }
+
     nav {
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-evenly;
     }
 
-    button{
+    button {
         display: none;
     }
 
@@ -66,9 +69,9 @@
         background-color: #777575;
         transition: 0.3s ease;
         transform: translateX(-190px);
-      }
-    
-      label h2 {
+    }
+
+    label h2 {
         color: rgb(254, 254, 254);
         font-weight: 800;
         text-align: right;
@@ -76,15 +79,15 @@
         padding-right: 30px;
         pointer-events: none;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-      }
-    
-      label div img {
+    }
+
+    label div img {
         width: 100%;
-      }
-    
-      label div ul li a {
+    }
+
+    label div ul li a {
         margin-top: 10%;
-        
+
         color: rgb(0, 0, 0);
         font-weight: 800;
         padding: 5px 20px;
@@ -93,20 +96,20 @@
         text-decoration: none;
         transition: 0.25s ease-out;
         text-shadow: 2px 2px 4px rgb(255, 255, 255);
-      }
-    
-      label div ul li:hover a {
+    }
+
+    label div ul li:hover a {
         color: #fff;
         background-color: #A76969;
-      }
-    
-      label input {
+    }
+
+    label input {
         display: none;
         visibility: hidden;
         appearance: none;
-      }
-    
-      .toggle {
+    }
+
+    .toggle {
         position: fixed;
         height: 30px;
         width: 30px;
@@ -117,57 +120,80 @@
         border-radius: 2px;
         background-color: rgb(255, 255, 255);
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      }
-    
-      .toggle .common {
+    }
+
+    .toggle .common {
         position: absolute;
         height: 2px;
         width: 20px;
         background-color: #A76969;
         border-radius: 50px;
         transition: 0.3s ease;
-      }
-    
-      .toggle .top_line {
+    }
+
+    .toggle .top_line {
         top: 30%;
         left: 50%;
         transform: translate(-50%, -50%);
-      }
-    
-      .toggle .middle_line {
+    }
+
+    .toggle .middle_line {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-      }
-    
-      .toggle .bottom_line {
+    }
+
+    .toggle .bottom_line {
         top: 70%;
         left: 50%;
         transform: translate(-50%, -50%);
-      }
-    
-      input:checked~.toggle .top_line {
+    }
+
+    input:checked~.toggle .top_line {
         left: 2px;
         top: 14px;
         width: 25px;
         transform: rotate(45deg);
-      }
-    
-      input:checked~.toggle .bottom_line {
+    }
+
+    input:checked~.toggle .bottom_line {
         left: 2px;
         top: 14px;
         width: 25px;
         transform: rotate(-45deg);
-      }
-    
-      input:checked~.toggle .middle_line {
+    }
+
+    input:checked~.toggle .middle_line {
         opacity: 0;
         transform: translate(30px);
-      }
-    
-      input:checked~.slide {
+    }
+
+    input:checked~.slide {
         transform: translateX(0);
         box-shadow: 2px 0 10px rgb(255, 255, 255);
-      }
+    }
 
+    #destaque {
+        display: flex;
+        justify-content: center;
+        margin-top: 10%;
+    }
+
+    #Contato {
+        background-image: url(../IMG/CARLOS_TERNOS.png);
+        max-width: 100rem;
+        height: 100px;
+        margin-top: 10%;
+    }
+    
+    #destaque2 {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10%;
+        flex-wrap: wrap;
+    }
+
+    #carrousel1 {
+       display: none;
+    }
 }

@@ -60,12 +60,13 @@
 
     .slide {
         margin: -18px 0px 0px 0px;
-        height: 102vh;
+        height: 200vh;
         width: 190px;
         position: absolute;
         top: 0%;
         left: 0%;
         /* position: fixed; */
+        z-index: 2;
         background-color: #777575;
         transition: 0.3s ease;
         transform: translateX(-190px);
@@ -87,7 +88,6 @@
 
     label div ul li a {
         margin-top: 10%;
-
         color: rgb(0, 0, 0);
         font-weight: 800;
         padding: 5px 20px;
@@ -97,7 +97,11 @@
         transition: 0.25s ease-out;
         text-shadow: 2px 2px 4px rgb(255, 255, 255);
     }
-
+    ul{
+        list-style-type: none;
+        padding-left: 0;
+        text-align: justify;
+    }
     label div ul li:hover a {
         color: #fff;
         background-color: #A76969;

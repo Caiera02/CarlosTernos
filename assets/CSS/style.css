@@ -60,7 +60,7 @@
 
     .slide {
         margin: -18px 0px 0px 0px;
-        height: 200vh;
+        height: 50rem;
         width: 190px;
         position: absolute;
         top: 0%;
@@ -82,6 +82,12 @@
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
+    h2 {
+        text-align: center;
+        padding: 25px 0px;
+        background-color: black;
+    }
+
     label div img {
         width: 100%;
     }
@@ -97,11 +103,13 @@
         transition: 0.25s ease-out;
         text-shadow: 2px 2px 4px rgb(255, 255, 255);
     }
-    ul{
+
+    ul {
         list-style-type: none;
         padding-left: 0;
         text-align: justify;
     }
+
     label div ul li:hover a {
         color: #fff;
         background-color: #A76969;
@@ -117,9 +125,9 @@
         position: fixed;
         height: 30px;
         width: 30px;
-        top: 25px;
-        left: 20px;
-        z-index: 1;
+        top: 15px;
+        left: 10px;
+        z-index: 3;
         cursor: pointer;
         border-radius: 2px;
         background-color: rgb(255, 255, 255);
@@ -186,10 +194,10 @@
     #Contato {
         background-image: url(../IMG/CARLOS_TERNOS.png);
         max-width: 100rem;
-        height: 100px;
+        height: 150px;
         margin-top: 10%;
     }
-    
+
     #destaque2 {
         display: flex;
         justify-content: space-around;
@@ -198,6 +206,6 @@
     }
 
     #carrousel1 {
-       display: none;
+        display: none;
     }
 }

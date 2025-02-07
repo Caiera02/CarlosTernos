@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/CSS/Adulto.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <form method="GET" action="{% url 'cars_list' %}">
+        <input type="text" name="search" placeholder="Buscar carro...">
+        <button type="submit">Buscar</button>
+    </form>
+
+    <div class="car-grid">
+        {% if control %}
+        {% for controle in control %}
+        <div class="car-card">
+            <img src="{{ controle.img.url }}" alt="{{ controle.branch }} - {{ controle.phones }}">
+            <h2>{{ controle.name }}</h2>
+            <p>{{ controle.phones }}/{{ controle.branch }} </p>
+            {% comment %} <p>{{ car.factory_year }} - R$ {{ car.value }}</p> {% endcomment %}
+        </div>
+        {% comment %} <div class="car-card">
+            <img src="{{ controle.img1.url }}" alt="{{ controle.branch }} - {{ controle.phones }}">
+            <h2>{{ controle.name }}</h2>
+            <p>{{ controle.phones }}/{{ controle.branch }} </p>
+        </div> {% endcomment %}
+        {% endfor %}
+        {% else %}
+        <p class="no-results">Nenhum carro encontrado.</p>
+        {% endif %}
+    </div>
+</body>
+
+</html>

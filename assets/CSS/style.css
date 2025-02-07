@@ -212,7 +212,7 @@
     }
 }
 
-@media (max-width:375px){
+@media (max-width:370px){
     #Capa {
         background-image: url(../IMG/Capa\ Celular.png);
         
@@ -221,9 +221,11 @@
     }
 
     #Contato {
-        background-image: url(../IMG/CARLOS_TERNOS.png);
-        max-width: 10;
-        height: 150px;
-        margin-top: 10%;
+        background-image: none;
+        border: solid black 3px;
+
+    }
+    p{
+        display: none;
     }
 }

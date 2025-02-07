@@ -6,8 +6,6 @@
     margin-bottom: 10%;
 }
 
-
-
 @media (max-width:842px) {
     body {
         background-color: aliceblue;
@@ -61,12 +59,14 @@
     /*  Sidebar   */
     .slide {
         margin: -18px 0px 0px 0px;
-        height: 102vh;
+        height: 50rem;
         width: 190px;
         /* position: absolute; */
         top: 0%;
         left: 0%;
         position: fixed;
+        /* position: fixed; */
+        z-index: 2;
         background-color: #777575;
         transition: 0.3s ease;
         transform: translateX(-190px);
@@ -83,13 +83,18 @@
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
+    h2 {
+        text-align: center;
+        padding: 25px 0px;
+        background-color: black;
+    }
+
     label div img {
         width: 100%;
     }
 
     label div ul li a {
         margin-top: 10%;
-
         color: rgb(0, 0, 0);
         font-weight: 800;
         padding: 5px 20px;
@@ -98,6 +103,12 @@
         text-decoration: none;
         transition: 0.25s ease-out;
         text-shadow: 2px 2px 4px rgb(255, 255, 255);
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+        text-align: justify;
     }
 
     label div ul li:hover a {
@@ -115,9 +126,9 @@
         position: fixed;
         height: 30px;
         width: 30px;
-        top: 25px;
-        left: 20px;
-        z-index: 10000;
+        top: 15px;
+        left: 10px;
+        z-index: 3;
         cursor: pointer;
         border-radius: 2px;
         background-color: rgb(255, 255, 255);
@@ -194,7 +205,7 @@
     #Contato {
         background-image: url(../IMG/CARLOS_TERNOS.png);
         max-width: 100rem;
-        height: 100px;
+        height: 150px;
         margin-top: 10%;
     }
 
@@ -205,4 +216,54 @@
         flex-wrap: wrap;
     }
 
+    #carrousel1 {
+        display: none;
+    }
+
+    span{
+        background-color: black;
+    }
+
+    #container{
+        border: solid black 2px;
+
+    }
 }
+
+@media (max-width:375px){
+    #Capa {
+        background-image: url(../IMG/Capa\ Celular.png);
+        width: 100%;
+        height: 200px;
+    }
+
+    #Contato {
+        display: flex;
+        /* background-image: none; */
+        /* border: solid black 3px; */
+        color: #fff;
+        max-width: 100%;
+        height: 210px;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;   
+    }
+
+    #destaque{
+        display: flex;
+        justify-content: center;
+        margin-top: 10%;
+    }
+
+    .container{
+       
+    }
+
+}
+
+/* @media only screen and (min-width: 768px) {
+    body {
+      display: none;
+    }
+  } */

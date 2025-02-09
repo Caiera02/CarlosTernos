@@ -1,9 +1,14 @@
+{% block content %}
+
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'CSS/Adulto.css' %}">
     <link rel="stylesheet" href="assets/CSS/Adulto.css">
     <title>Document</title>
 </head>
@@ -15,12 +20,12 @@
     </form>
 
     <div class="car-grid">
-        {% if control %}
-        {% for controle in control %}
+        {% if terno %}
+        {% for controle in terno %}
         <div class="car-card">
             <img src="{{ controle.img.url }}" alt="{{ controle.branch }} - {{ controle.phones }}">
-            <h2>{{ controle.name }}</h2>
-            <p>{{ controle.phones }}/{{ controle.branch }} </p>
+            <h2>{{ controle.titulo }}</h2>
+            <p>{{ controle.descricao }}/{{ controle.branch }} </p>
             {% comment %} <p>{{ car.factory_year }} - R$ {{ car.value }}</p> {% endcomment %}
         </div>
         {% comment %} <div class="car-card">
@@ -36,3 +41,5 @@
 </body>
 
 </html>
+
+{% endblock %}

@@ -59,7 +59,7 @@
     /*  Sidebar   */
     .slide {
         margin: -18px 0px 0px 0px;
-        height: 80rem;
+        height: 50rem;
         width: 190px;
         /* position: absolute; */
         top: 0%;
@@ -265,4 +265,11 @@
     .container{
        
     }
+
 }
+
+/* @media only screen and (min-width: 768px) {
+    body {
+      display: none;
+    }
+  } */

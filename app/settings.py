@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -128,4 +129,103 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
+JAZZMIN_SETTINGS = {
+    # title of the window (Will default to current_admin_site.site_title if absent or None)
+    'site_title': 'Controle de equipamento',
 
+    # Title on the login screen (19 chars max) (defaults to current_admin_site.site_header if absent or None)
+    'site_header': 'Controle de equipamento',
+
+    # Title on the brand (19 chars max) (defaults to current_admin_site.site_header if absent or None)
+    'site_brand': 'Controle de equipamento',
+    
+    # Logo to use for your site, must be present in static files, used for brand on top left
+    #"site_logo": "jazzmin/img/image.png",
+    
+ 
+    
+    'icons': {
+        'auth': 'fas fa-users-cog',
+        'auth': 'fas fa-star',
+        'auth.user': 'fas fa-user',
+        'auth.Group': 'fas fa-users',
+        'products.Controle': 'fas fa-laptop',
+        'products.Prestador': 'fas fa-user',
+        'products.Perifericos': 'fas fa-microchip',
+        'products.Category': 'fas fa-object-group',
+        'products.Brand': 'fas fa-copyright',
+        'products.Branch': 'fas fa-flag-usa',
+        'products.Cooperado': 'fas fa-users',
+        'products.Phone': 'fas fa-mobile',
+        'products.Product': 'fas fa-box',
+        'tickets.ticket':'fas fa-list',
+        'tickets.ServiceChannel':'fas fa-phone',
+        'tickets.Motive':'fas fa-triangle-exclamation',
+        'tickets.status':'fas fa-progress',
+    },
+
+    # Welcome text on the login screen
+    'welcome_sign': 'Bem-vindo(a) ao System Caio',
+   
+    
+    # Copyright on the footer
+    'copyright': 'Caiera LTDA',
+
+    # Links to put along the top menu
+    "topmenu_links": [
+
+        # Url that gets reversed (Permissions can be added)
+        {"name": "Home",  "url": "admin:index", "permissions": ["auth.view_user"]},
+
+        # # external url that opens in a new window (Permissions can be added)
+        {"name": "Visualizar", "url": "http://127.0.0.1:8000/terno_adulto", "new_window": True},
+        # {"name": "Abrir chamado", "url": "http://127.0.0.1:8000/admin/tickets/ticket/add/", "new_window":True},
+
+        # model admin to link to (Permissions checked against model)
+        # {"model": "auth.User"},
+
+        # App with dropdown menu to all its models pages (Permissions checked against models)
+        {"app": "books"},
+    ],
+    # List of model admins to search from the search bar, search bar omitted if excluded
+    # If you want to use a single search field you dont need to use a list, you can use a simple string
+    #'search_model': ['products.Controle'], # Faz uma busca no model, fica no top do site
+
+    # Whether to show the UI customizer on the sidebar
+    'show_ui_builder': False, # Alteração das cores,layout etc
+    
+}
+
+JAZZMIN_UI_TWEAKS = {
+    "navbar_small_text": False,
+    "footer_small_text": False,
+    "body_small_text": True,
+    "brand_small_text": False,
+    "brand_colour": "navbar-indigo",
+    "accent": "accent-primary",
+    "navbar": "navbar-indigo navbar-dark",
+    "no_navbar_border": False,
+    "navbar_fixed": False,
+    "layout_boxed": False,
+    "footer_fixed": True,
+    "sidebar_fixed": False,
+    "sidebar": "sidebar-light-indigo",
+    "sidebar_nav_small_text": False,
+    "sidebar_disable_expand": False,
+    "sidebar_nav_child_indent": False,
+    "sidebar_nav_compact_style": True,
+    "sidebar_nav_legacy_style": True,
+    "sidebar_nav_flat_style": True,
+    "theme": "cerulean",
+    "dark_mode_theme": None,
+    "button_classes": {
+        "primary": "btn-outline-primary",
+        "secondary": "btn-outline-secondary",
+        "info": "btn-info",
+        "warning": "btn-outline-warning",
+        "danger": "btn-danger",
+        "success": "btn-success"
+    },
+    "language_chooser": True,
+    "actions_sticky_top": False
+}

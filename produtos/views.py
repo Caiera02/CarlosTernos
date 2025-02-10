@@ -20,3 +20,10 @@ def home_view (request):
         request,
         'home.html'
     )
+
+def kids_view(request):
+    
+    return render(
+        request,
+        'teste.html'
+    )

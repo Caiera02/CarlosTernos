@@ -25,13 +25,12 @@ SECRET_KEY = 'django-insecure-8er3!#0$6%qqfk)866(*3kk5egy+e7c0i0t1@sfqwd1jaux==3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['suportecoop.pythonanywhere','localhost']
+ALLOWED_HOSTS = ['https://suportecoop.pythonanywhere.com/' 'localhost:8000']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    # 'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

@@ -6,6 +6,6 @@ from produtos.views import terno_view, home_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/',home_view, name= 'home' ),
+    path('',home_view, name= 'home' ),
     path('terno_adulto/',terno_view, name='terno_list'),
 ]+ static(settings.MEDIA_URL,document_root= settings.MEDIA_ROOT)

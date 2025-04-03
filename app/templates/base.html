@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -284,7 +286,7 @@
 
       <div class="slide">
         <h2>Menu</h2>
-        <img src="assets/IMG/CARLOS_TERNOS.png" alt="" />
+        <img src="{% static 'IMG/label.svg' %}" alt="" />
         <ul>
           <li>
             <a href="{% url 'terno_list' %}">Adulto</a>

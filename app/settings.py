@@ -75,24 +75,23 @@ WSGI_APPLICATION = 'app.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'carlos',
-        'USER': 'postgres',
-        'PASSWORD': 'heveca123567',
-        'HOST': 'localhost',
-        'PORT': '5432',
-
-
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'carlos',
+#         'USER': 'postgres',
+#         'PASSWORD': 'heveca123567',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
 
 
 # Password validation
@@ -140,6 +139,66 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+JAZZMIN_SETTINGS = {
+    
+    "show_ui_builder": True,
+    "user_avatar": "Terno.img",
+    
+    # title of the window (Will default to current_admin_site.site_title if absent or None)
+    'site_title': 'Carlos Ternos',
+
+    # Title on the login screen (19 chars max) (defaults to current_admin_site.site_header if absent or None)
+    'site_header': 'Carlos Ternos',
+
+    # Title on the brand (19 chars max) (defaults to current_admin_site.site_header if absent or None)
+    'site_brand': 'Carlos Ternos',
+    
+    # Logo to use for your site, must be present in static files, used for brand on top left
+    "site_logo": "IMG/logo_P.svg",
+    
+    # Logo to use for your site, must be present in static files, used for login form logo (defaults to site_logo)
+    "login_logo": "IMG/logo.svg",
+
+    # Logo to use for login form in dark themes (defaults to login_logo)
+    # "login_logo_dark": "IMG/Capa.png",
+    
+    'icons': {
+        'auth': 'fas fa-users-cog',
+        'auth': 'fas fa-star',
+        'auth.user': 'fas fa-user',
+        'auth.Group': 'fas fa-users',
+    },
+
+    # Welcome text on the login screen
+    'welcome_sign': 'Bem-vindo(a) ao System Caio',
+   
+    # Copyright on the footer
+    'copyright': 'Carlos Ternos LTDA',
+
+    # Links to put along the top menu
+    "topmenu_links": [
+
+        # Url that gets reversed (Permissions can be added)
+        {"name": "Home",  "url": "admin:index", "permissions": ["auth.view_user"]},
+
+        # external url that opens in a new window (Permissions can be added)
+        {"name": "Visualizar", "url": "http://127.0.0.1:8000/img/?search=and", "new_window": True},
+        {"name": "Abrir chamado", "url": "http://127.0.0.1:8000/admin/tickets/ticket/add/", "new_window":True},
+
+        # model admin to link to (Permissions checked against model)
+        # {"model": "auth.User"},
+
+        # App with dropdown menu to all its models pages (Permissions checked against models)
+        {"app": "books"},
+    ],
+    # List of model admins to search from the search bar, search bar omitted if excluded
+    # If you want to use a single search field you dont need to use a list, you can use a simple string
+    #'search_model': ['products.Controle'], # Faz uma busca no model, fica no top do site
+
+    # Whether to show the UI customizer on the sidebar
+    'show_ui_builder': False, # Alteração das cores,layout etc
+}
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'

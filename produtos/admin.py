@@ -1,11 +1,12 @@
 from django.contrib import admin
-from .models import Terno, Infantil, Tamnho
+from .models import Terno, Infantil, Tamanho
 # Register your models here.
 
-@admin.register(Tamnho)
-class TamanhoAdmin(admin.ModelAdmin):
-    list_display =( 'size',)
 
+@admin.register(Tamanho)
+class TamanhoAdmin(admin.ModelAdmin):
+    list_display = ('numero',)
+    
 @admin.register(Terno)
 class TernoAdmin(admin.ModelAdmin):
     list_display = ('titulo','descricao',)

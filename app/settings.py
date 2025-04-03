@@ -141,10 +141,7 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 JAZZMIN_SETTINGS = {
-    
-    "show_ui_builder": True,
-    "user_avatar": "Terno.img",
-    
+
     # title of the window (Will default to current_admin_site.site_title if absent or None)
     'site_title': 'Carlos Ternos',
 

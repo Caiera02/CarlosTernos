@@ -203,7 +203,7 @@
       
         #carrousel1 {
           /* border: 10px solid black;
-                            padding: 100px;*/
+                                  padding: 100px;*/
           max-width: 200px;
           max-height: 300px;
         }
@@ -271,6 +271,7 @@
           justify-content: center;
           margin-top: 10%;
         }
+
       }
     </style>
   </head>
@@ -284,9 +285,12 @@
         <span class="bottom_line common"></span>
       </div>
 
+      <!-- Botão do WhatsApp -->
+      <a href="https://wa.me/+5511989403022" class="whatsapp-float" target="_blank"><img src="{% static 'IMG/whatsapp.svg' %}" alt="WhatsApp" /></a>
+
       <div class="slide">
         <h2>Menu</h2>
-        <img src="{% static 'IMG/label.svg' %}" alt="" />
+        <a href="{% url 'home' %}"><img src="{% static 'IMG/whats.png' %}" alt="" /></a>
         <ul>
           <li>
             <a href="{% url 'terno_list' %}">Adulto</a>
@@ -298,7 +302,7 @@
             <a href="#">Acessorios</a>
           </li>
           <li>
-            <a href="#">Contato</a>
+            <a href="http://wa.me/+5511989403022">Contato</a>
           </li>
         </ul>
       </div>
@@ -324,7 +328,7 @@
           <a href="#" class="nav-link px-2 text-body-secondary">FAQs</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link px-2 text-body-secondary">Contato</a>
+          <a href="http://wa.me/+5511989403022" class="nav-link px-2 text-body-secondary">Contato</a>
         </li>
       </ul>
       <p class="text-center text-body-secondary">&copy; 2024 Company, Inc</p>

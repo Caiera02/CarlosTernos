@@ -1,3 +1,5 @@
+{% extends 'base.html' %}
+
 {% load static %}
 {% block content %}
   <!DOCTYPE html>
@@ -5,14 +7,11 @@
     <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Catálogo de Ternos</title>
       <link rel="icon" href="1.png" />
-      <link rel="stylesheet" href="{% static 'CSS/Adulto.css' %}" />
+      <link rel="stylesheet" href="{% static 'CSS/teste.css' %}" />
     </head>
     <body>
-      <header>
-        <h1>Catálogo de Ternos</h1>
-      </header>
+    
 
       <main class="catalogo">
         {% if terno %}

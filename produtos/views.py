@@ -5,17 +5,13 @@ from produtos.models import Terno
 
 def terno_view(request):
     ternos = Terno.objects.all()
-    print(ternos)
-
     return render(
         request,
-        # 'control.html',
         'Adulto.html',
         {'terno': ternos}
         )
 
 def home_view (request):
-
     return render(
         request,
         'Home.html'

@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #f2f2f2, #e6e6e6);
+  color: #333;
+}
+
+header {
+  background-color: #1a1a1a;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.produto {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.produto img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.produto h2 {
+  font-size: 1.4rem;
+  margin: 1rem;
+  color: #222;
+}
+
+.produto p {
+  font-size: 1rem;
+  margin: 0 1rem 0.5rem 1rem;
+  color: #555;
+}
+
+.produto span {
+  display: block;
+  font-size: 0.95rem;
+  margin: 0 1rem 1rem 1rem;
+  color: #888;
+}

@@ -7,7 +7,7 @@ from acessorios.views import acessorios_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('Home',home_view, name= 'home' ),
-    path('Terno_adulto/',terno_view, name='terno_list'),
-    path('Acessorios/',acessorios_view, name='Acessorios_list'),
+    path('home',home_view, name= 'home' ),
+    path('terno/',terno_view, name='terno_list'),
+    path('acessorios/',acessorios_view, name='Acessorios_list'),
 ]+ static(settings.MEDIA_URL,document_root= settings.MEDIA_ROOT)

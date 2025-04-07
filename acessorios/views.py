@@ -5,6 +5,5 @@ from django.shortcuts import render
 def acessorios_view(request):
     return render(
         request,
-        '',
-        
+        'Acessorio.html',
     )

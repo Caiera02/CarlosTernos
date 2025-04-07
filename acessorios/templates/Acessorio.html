@@ -14,10 +14,10 @@
     
 
       <main class="catalogo">
-        {% if terno %}
-          {% for ternos in terno %}
+        {% if acessorio %}
+          {% for acessorios in acessorio %}
             <div class="produto">
-                <img src="{{ ternos.img.url }}" alt="{{ ternos.titulo }} - {{ ternos.descricao }}" />
+                <img src="{{ acessorios.img.url }}" alt="{{ ternos.titulo }} - {{ ternos.descricao }}" />
                 <h3>{{ ternos.titulo }}</h3>
                 <p>{{ ternos.descricao }}</p>
               <span>amanhos disponíveis:{% for tamanho in ternos.tamanho.all %}

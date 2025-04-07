@@ -16,10 +16,3 @@ def home_view (request):
         request,
         'Home.html'
     )
-    
-def acessorios_view(request):
-    return render(
-        request,
-        '',
-        
-    )

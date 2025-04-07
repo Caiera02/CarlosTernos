@@ -7,6 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
     <style>
+     
+      header {
+        background-color: #1a1a1a;
+        color: #fff;
+        text-align: center;
+        padding: 2rem 1rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      }
+      
+      header h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+      
       footer {
         background-color: #777575;
         font-weight: 600;
@@ -21,6 +36,7 @@
       }
       
       @media (max-width: 842px) {
+
         body {
           background-color: aliceblue;
         }
@@ -203,7 +219,7 @@
       
         #carrousel1 {
           /* border: 10px solid black;
-                                  padding: 100px;*/
+          padding: 100px;*/
           max-width: 200px;
           max-height: 300px;
         }
@@ -271,22 +287,29 @@
           justify-content: center;
           margin-top: 10%;
         }
-
       }
+      @media (min-width: 842px) {
+        #Sidebar {
+          display: none;
+        }
+      }
+
     </style>
   </head>
+
+  <header>
+    <h1>Catálogo de Ternos</h1>
+  </header> 
+  
   <body>
     <!-- Sidebar -->
-    <label>
+    <label id="Sidebar">
       <input type="checkbox" />
       <div class="toggle">
         <span class="top_line common"></span>
         <span class="middle_line common"></span>
         <span class="bottom_line common"></span>
       </div>
-
-      <!-- Botão do WhatsApp -->
-      {% comment %} <a href="https://wa.me/+5511989403022" class="whatsapp-float" target="_blank"><img src="{% static 'IMG/whtas.png' %}" alt="WhatsApp" /></a> {% endcomment %}
 
       <div class="slide">
         <h2>Menu</h2>
@@ -295,18 +318,22 @@
           <li>
             <a href="{% url 'terno_list' %}">Adulto</a>
           </li>
+
           <li style="display: none;">
             <a href="#">Infantil</a>
           </li>
+
           <li style="display: none;">
             <a href="#">Acessorios</a>
           </li>
+
           <li>
             <a href="http://wa.me/+5511989403022">Contato</a>
           </li>
         </ul>
       </div>
     </label>
+
     <main>
       {% block content %}
 

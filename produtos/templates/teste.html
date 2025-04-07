@@ -1,0 +1,37 @@
+{% load static %}
+{% block content %}
+  <!DOCTYPE html>
+  <html lang="pt-BR">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Catálogo de Ternos</title>
+      <link rel="icon" href="1.png" />
+      <link rel="stylesheet" href="{% static 'CSS/Adulto.css' %}" />
+    </head>
+    <body>
+      <header>
+        <h1>Catálogo de Ternos</h1>
+      </header>
+
+      <main class="catalogo">
+        {% if terno %}
+          {% for ternos in terno %}
+            <div class="produto">
+                <img src="{{ ternos.img.url }}" alt="{{ ternos.titulo }} - {{ ternos.descricao }}" />
+                <h3>{{ ternos.titulo }}</h3>
+                <p>{{ ternos.descricao }}</p>
+              <span>amanhos disponíveis:{% for tamanho in ternos.tamanho.all %}
+                {{ tamanho.numero }}{% if not forloop.last %} - {% endif %}
+              {% empty %}
+                Nenhum tamanho disponível
+              {% endfor %}</span>
+            </div>
+          {% endfor %}
+        {% else %}
+          <p class="no-results">Nenhuma foto encontrada</p>
+        {% endif %}
+      </main>
+    </body>
+  </html>
+{% endblock %}

@@ -20,7 +20,7 @@
   .car-card:hover {
     /* cursor: pointer; */
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
-    transform: translateY(-80px);
+    transform: translateY(-12px);
   }
   
   .car-card img {
@@ -44,11 +44,11 @@
     font-size: 1rem;
     margin-bottom: 10px;
   }
-  
-  @media (max-width: 842px) {
-    .car-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
+
+  select{
+    border-radius: 3px;
+    padding: 10px;
+    margin-right: 10px;
   }
   
   form {
@@ -96,5 +96,21 @@
       margin-top: 10%;
       flex-wrap: wrap;
     }
-  
+     
   }
+
+  @media (max-width: 842px) {
+    .car-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* select {
+      display: none;
+    } */
+  }
+
+  /* @media (min-width:842px){
+    input{
+      display: none;
+    }
+  } */

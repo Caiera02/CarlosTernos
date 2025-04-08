@@ -14,10 +14,16 @@
       <title>Sapato</title>
     </head>
     <body>
-
       {% csrf_token %}
+
       <form method="GET" action="{% url 'sapato_list' %}">
-        <input type="text" name="search" placeholder="Buscar numera..." />
+        <select name="search">
+          <option value="">Selecione o tamanho</option>
+          {% for numeros in sapato %}
+            <option value="{{ numeros.tamanho }}">{{ numeros.tamanho }}</option>
+          {% endfor %}
+        </select> 
+        {% comment %} <input type="text" name="search" placeholder="Buscar numeração..." /> {% endcomment %}
         <button type="submit">Buscar</button>
       </form>
 
@@ -38,11 +44,10 @@
                   Nenhum tamanho disponível
                 {% endfor %}
               </p> {% endcomment %}
-
             </div>
           {% endfor %}
         {% else %}
-          <p class="no-results">Nenhuma foto encontrada</p>
+          <p class="no-results">Nenhum paramêtro encontrada</p>
         {% endif %}
       </div>
     </body>

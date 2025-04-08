@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Tamanho,Terno, Infantil
+from .models import Tamanho,Terno, Infantil, Sapato
 # Register your models here.
 
 @admin.register(Tamanho)
@@ -23,3 +23,8 @@ class TernoAdmin(admin.ModelAdmin):
 class InfantilAdmin(admin.ModelAdmin):
     list_display = ('titulo',)
 # admin.site.register(Terno,TernoAdmin)
+
+@admin.register(Sapato)
+class SapatoAdmin(admin.ModelAdmin):
+    list_display =('titulo', )
+    

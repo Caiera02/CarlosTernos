@@ -11,4 +11,5 @@ urlpatterns = [
     path('terno/',terno_view, name='terno_list'),
     path('acessorios/',acessorios_view, name='Acessorios_list'),
     path('sapato/',sapato_view, name='sapato_list'),
+    path('camisa/',sapato_view, name='camisa_list'),
 ]+ static(settings.MEDIA_URL,document_root= settings.MEDIA_ROOT)

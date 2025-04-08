@@ -12,7 +12,7 @@ class TernoAdmin(admin.ModelAdmin):
     list_display = ('titulo','descricao','mostrar_tamanhos',)
     list_filter = ('tamanho',)
     search_fields = ('titulo', 'descricao')
-    list_display_links = ('titulo',)  # Só o título será clicável para edição
+    ordering = ('titulo',)
     
     def mostrar_tamanhos(self, obj):
         return " - ".join([str(t) for t in obj.tamanho.all()])
@@ -21,12 +21,14 @@ class TernoAdmin(admin.ModelAdmin):
 @admin.register(Infantil)
 class InfantilAdmin(admin.ModelAdmin):
     list_display = ('titulo',)
-# admin.site.register(Terno,TernoAdmin)
+    ordering = ('titulo',)
 
 @admin.register(Sapato)
 class SapatoAdmin(admin.ModelAdmin):
     list_display =('titulo', )
+    ordering = ('titulo',)
     
 @admin.register(Camisa)
 class CamisaAdmin(admin.ModelAdmin):
-    list_display =('titulo', )    
+    list_display =('titulo', )   
+    ordering = ('titulo',)

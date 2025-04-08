@@ -22,13 +22,13 @@
       </form>
 
       <div class="car-grid">
-        {% if sapato %}
-          {% for sapatos in sapato %}
+        {% if camisa %}
+          {% for camisas in camisa %}
             <div class="car-card">
-              <img src="{{ sapatos.img.url }}" alt="{{ sapatos.titulo }} - {{ sapatos.descricao }}" />
-              <h3>{{ sapatos.titulo }}</h3>
-              <p>{{ sapatos.descricao }}</p>
-              <p>{{ sapatos.tamanho }}</p>
+              <img src="{{ camisas.img.url }}" alt="{{ camisas.titulo }} - {{camisas.descricao }}" />
+              <h3>{{camisas.titulo }}</h3>
+              <p>{{ camisas.descricao }}</p>
+              <p>{{ camisas.tamanho }}</p>
 
               {% comment %}Tive que fazer outro for porque {tamanho} é uma relação ManyTo-Many, você precisa iterar sobre os tamanhos associados a cada terno{% endcomment %}
               {% comment %} <p>

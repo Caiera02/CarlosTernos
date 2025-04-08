@@ -25,3 +25,10 @@ class Sapato (models.Model):
     cor = models.CharField(max_length=20)
     tamanho= models.IntegerField(choices=[(i,i) for i in range (37,44)])
     img = models.ImageField(upload_to='produtos/sapato',verbose_name='Imagem 1')
+
+class Camisa(models.Model):
+    titulo = models.CharField(max_length=20,verbose_name= 'Nome')
+    descricao= models.TextField(max_length=100,blank= True, null=True,verbose_name = 'Texto')
+    cor = models.CharField(max_length=20)
+    tamanho= models.IntegerField(choices=[(i,i) for i in range (1,8)])
+    img = models.ImageField(upload_to='produtos/camisas',verbose_name='Imagem 1')

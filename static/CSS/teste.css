@@ -31,7 +31,7 @@ header h1 {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   padding: 3rem;
-  max-width: 1200px;
+  /* max-width: 100px; */
   margin: 0 auto;
 }
 
@@ -41,6 +41,7 @@ header h1 {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-height: 550px;
 }
 
 .produto:hover {

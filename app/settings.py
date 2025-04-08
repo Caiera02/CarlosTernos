@@ -159,7 +159,7 @@ JAZZMIN_SETTINGS = {
     "login_logo": "IMG/logo.svg",
 
     # Logo to use for login form in dark themes (defaults to login_logo)
-    "login_logo_dark": "IMG/Capa.png",
+    "login_logo_dark": "IMG/logo40px.svg",
     
     'icons': {
         'auth': 'fas fa-users-cog',

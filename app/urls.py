@@ -12,9 +12,9 @@ urlpatterns = [
     path('acessorios/',acessorios_view, name='Acessorios_list'),
     path('sapato/',sapato_view, name='sapato_list'),
     path('camisa/',sapato_view, name='camisa_list'),
-# ]+ static(settings.MEDIA_URL,document_root= settings.MEDIA_ROOT)
-]
+]+ static(settings.MEDIA_URL,document_root= settings.MEDIA_ROOT)
+
 # Adiciona o suporte a arquivos estáticos (CSS, JS etc.)
-if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# if settings.DEBUG:
+#     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])
+#     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

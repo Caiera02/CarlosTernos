@@ -44,18 +44,19 @@
       </div>
 
       <div class="slide">
-        <h2>Menu</h2>
-        <a href="{% url 'home' %}"><img src="{% static 'IMG/label.svg' %}" alt="" /></a>
+        <a href="{% url 'home' %}"><img src="{% static 'IMG/Logo.jpeg' %}" alt="" /></a>
+        {% comment %} <h2 id="menu">Menu</h2> {% endcomment %}
         <ul>
-          <li>  <a href="{% url 'terno_list' %}">Adulto</a>  </li>
+          <li> <a href="{% url 'home'%}"> Inicio </a></li>
+          <li> <a href="{% url 'terno_list' %}">Adulto</a></li>
 
-          <li> <a href="{% url 'Acessorios_list' %}">Acessorios</a> </li>
+          <li> <a href="{% url 'Acessorios_list' %}">Acessorios</a></li>
 
-          <li> <a href="{% url 'camisa_list'%}">Camisa</a> </li>
+          <li> <a href="{% url 'camisa_list'%}">Camisa</a></li>
 
-          <li> <a href="{% url 'sapato_list'%}">Sapato</a> </li>
+          <li> <a href="{% url 'sapato_list'%}">Sapato</a></li>
 
-          <li>  <a href="http://wa.me/+5511989403022">Contato</a> </li>
+          <li> <a href="http://wa.me/+5511989403022">Contato</a></li>
         </ul>
       </div>
     </label>

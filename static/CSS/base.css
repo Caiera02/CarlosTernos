@@ -102,11 +102,13 @@ header {
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
   
-    h2 {
+    #menu {
       text-align: center;
+      /* margin-right: 20%; */
       padding: 25px 0px;
+      margin-top:20px;
       background-color: black;
-    }
+    } 
   
     label div img {
       width: 100%;

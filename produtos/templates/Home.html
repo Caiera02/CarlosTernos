@@ -11,15 +11,15 @@
       <link rel="icon" type="image/png" href=" {% static 'IMG/logo40px.svg' %}" />
 
       <link rel="stylesheet" href="{% static 'CSS/style.css' %}" />
-      <title>Home</title>
+      <title >Home</title>
 
       <script>
         document.addEventListener('DOMContentLoaded', function () {
           const userAgent = navigator.userAgent || navigator.vendor || window.opera
-          if (!/Mobi|Android|iPhone|iPad|iPod||Opera Mini/i.test(userAgent)) {
+          if (!/Mobi|Android|iPhone|iPad|iPod|Opera Mini/i.test(userAgent)) {
             document.body.innerHTML = `
                               <div class="container">
-                                <h1>Acesso Restrito</h1>
+                                <h1 style="text-align: center;" >Acesso Restrito</h1>
                                 <p>Esta aplicação está disponível apenas para dispositivos móveis.</p>
                               </div>
                             `

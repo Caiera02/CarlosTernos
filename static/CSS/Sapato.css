@@ -109,8 +109,8 @@
     } */
   }
 
-  /* @media (min-width:842px){
+  @media (min-width:842px){
     input{
       display: none;
     }
-  } */
+  }

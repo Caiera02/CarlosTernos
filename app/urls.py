@@ -14,7 +14,6 @@ urlpatterns = [
     path('camisa/',sapato_view, name='camisa_list'),
 ]+ static(settings.MEDIA_URL,document_root= settings.MEDIA_ROOT)
 
-# Adiciona o suporte a arquivos estáticos (CSS, JS etc.)
-# if settings.DEBUG:
-#     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])
-#     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+ #Adiciona o suporte a arquivos estáticos (CSS, JS etc.)
+if not settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

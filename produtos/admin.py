@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Tamanho,Terno, Sapato, Camisa
+from produtos.models import Tamanho,Terno, Sapato, Camisa
 
 @admin.register(Tamanho)
 class TamanhoAdmin(admin.ModelAdmin):

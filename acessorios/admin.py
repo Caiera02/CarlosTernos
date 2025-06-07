@@ -5,5 +5,5 @@ from acessorios.models import Acessorios
 
 @admin.register(Acessorios)
 class AcessoriosAdmin(admin.ModelAdmin):
-    list_display = ("nome",)
+    list_display = ('nome','cor','img')
     

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Tamanho,Terno, Infantil, Sapato, Camisa
+from .models import Tamanho,Terno, Sapato, Camisa
 
 @admin.register(Tamanho)
 class TamanhoAdmin(admin.ModelAdmin):
@@ -18,17 +18,17 @@ class TernoAdmin(admin.ModelAdmin):
         return " - ".join([str(t) for t in obj.tamanho.all()])
     mostrar_tamanhos.short_description = 'Tamanhos'
 
-@admin.register(Infantil)
-class InfantilAdmin(admin.ModelAdmin):
-    list_display = ('titulo',)
-    ordering = ('titulo',)
+# @admin.register(Infantil)
+# class InfantilAdmin(admin.ModelAdmin):
+#     list_display = ('titulo',)
+#     ordering = ('titulo',)
 
 @admin.register(Sapato)
 class SapatoAdmin(admin.ModelAdmin):
-    list_display =('titulo', )
+    list_display =('titulo','tamanho')
     ordering = ('titulo',)
     
 @admin.register(Camisa)
 class CamisaAdmin(admin.ModelAdmin):
-    list_display =('titulo', )   
+    list_display =('titulo','tamanho' )   
     ordering = ('titulo',)

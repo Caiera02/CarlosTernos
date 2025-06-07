@@ -16,10 +16,10 @@
     <body>
 
       {% csrf_token %}
-      <form method="GET" action="{% url 'sapato_list' %}">
+      {% comment %} <form method="GET" action="{% url 'camisa_list' %}">
         <input type="text" name="search" placeholder="Buscar numera..." />
         <button type="submit">Buscar</button>
-      </form>
+      </form> {% endcomment %}
 
       <div class="car-grid">
         {% if camisa %}

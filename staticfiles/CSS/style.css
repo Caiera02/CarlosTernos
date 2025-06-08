@@ -6,6 +6,215 @@
     margin-bottom: 10%;
 }
 
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    color: #333;
+    min-height: 100vh;
+    padding-bottom: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* header {
+    background: linear-gradient(100deg, #e8b871, #e0c8a4);
+    padding: 1rem 0;
+    text-align: center;
+    color: white;
+} */
+
+#logo img {
+    max-width: 200px;
+    height: auto;
+}
+
+#botao {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+#botao button {
+    transition: transform 0.4s ease;
+}
+
+#botao button:hover {
+    transform: scale(1.08);
+}
+
+#destaque,
+#destaque2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    border-bottom: 2px solid #ddd;
+}
+
+.card-body {
+    padding: 1rem;
+    text-align: center;
+}
+
+#Contato {
+    text-align: center;
+    padding: 3rem 1rem;
+    border: 1px black solid;
+    /* background: linear-gradient(45deg, #FFB75E, #ED8F03); */
+    color: white;
+}
+
+#Contato img {
+    margin-top: 1rem;
+    width: 80px;
+    height: auto;
+    transition: transform 0.2s;
+}
+
+#Contato img:hover {
+    transform: scale(1.1);
+}
+
+/* Sidebar estilo toggle */
+.toggle {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.common {
+    background: #fff;
+    display: block;
+    height: 4px;
+    width: 30px;
+    margin: 6px 0;
+    border-radius: 2px;
+}
+
+.slide {
+    position: fixed;
+    background: #e4b46d;
+    color: white;
+    width: 220px;
+    height: 100vh;
+    top: 0;
+    left: -100%;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 2rem 1rem;
+}
+
+input[type="checkbox"]:checked~.slide {
+    left: 0;
+}
+
+.slide ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.slide ul li {
+    margin-bottom: 1.5rem;
+}
+
+.slide ul li a {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.slide h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.slide img {
+    width: 100%;
+    max-width: 160px;
+    margin-bottom: 1rem;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  margin-bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+}
+
+.whatsapp-float img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float img:hover {
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #ddd;
+    margin-top: 3rem;
+}
+
+footer .nav-link {
+    transition: color 0.3s;
+}
+
+footer .nav-link:hover {
+    color: #0d6efd;
+}
+
+/* Responsivo */
+/* @media (max-width: 768px) {
+  #botao {
+    flex-direction: column;
+  }
+
+  #destaque,
+  #destaque2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+} */
+
 @media (max-width:842px) {
     body {
         background-color: aliceblue;
@@ -185,13 +394,14 @@
         transform: translateX(0);
         box-shadow: 2px 0 10px rgb(255, 255, 255);
     }
+
     /* Fim do Sidebar */
 
     #carrousel1 {
         /* border: 10px solid black;
         padding: 100px;*/
         max-width: 200px;
-        max-height: 300px; 
+        max-height: 300px;
 
     }
 
@@ -220,17 +430,17 @@
         display: none;
     }
 
-    span{
+    span {
         background-color: black;
     }
 
-    #container{
+    #container {
         border: solid black 2px;
 
     }
 }
 
-@media (max-width:370px){
+@media (max-width:370px) {
     #Capa {
         background-image: url(../IMG/Capa\Celular.png);
         width: 100%;
@@ -242,7 +452,8 @@
         border: solid black 3px;
 
     }
-    p{
+
+    p {
         display: none;
         display: flex;
         /* background-image: none; */
@@ -253,10 +464,10 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        align-content: center;   
+        align-content: center;
     }
 
-    #destaque{
+    #destaque {
         display: flex;
         justify-content: center;
         margin-top: 10%;

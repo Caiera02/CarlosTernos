@@ -5,8 +5,4 @@ from acessorios.models import Acessorios
 
 def acessorios_view(request):
     acessorios = Acessorios.objects.all()
-    return render(
-        request,
-        'Acessorio.html',
-        {'acessorio' : acessorios}
-    )
+    return render(request,'Acessorio.html',{'acessorio' : acessorios})

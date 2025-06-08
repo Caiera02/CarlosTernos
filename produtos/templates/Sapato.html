@@ -19,11 +19,14 @@
       <form method="GET" action="{% url 'sapato_list' %}">
         <select name="search">
           <option value="">Selecione o tamanho</option>
-          {% for numeros in sapato %}
-            <option value="{{ numeros.tamanho }}">{{ numeros.tamanho }}</option>
-          {% endfor %}
+          <option value="37">37</option>
+          <option value="38">38</option>
+          <option value="38">39</option>
+          <option value="40">40</option>
+          <option value="41">41</option>
+          <option value="42">42</option>
+          <option value="42">43</option>
         </select> 
-        {% comment %} <input type="text" name="search" placeholder="Buscar numeração..." /> {% endcomment %}
         <button type="submit">Buscar</button>
       </form>
 
@@ -35,19 +38,10 @@
               <h3>{{ sapatos.titulo }}</h3>
               <p>{{ sapatos.descricao }}</p>
               <p>{{ sapatos.tamanho }}</p>
-
-              {% comment %}Tive que fazer outro for porque {tamanho} é uma relação ManyTo-Many, você precisa iterar sobre os tamanhos associados a cada terno{% endcomment %}
-              {% comment %} <p>
-                Tamanhos disponíveis:{% for tamanho in ternos.tamanho.all %}
-                  {{ tamanho.numero }}{% if not forloop.last %} - {% endif %}
-                {% empty %}
-                  Nenhum tamanho disponível
-                {% endfor %}
-              </p> {% endcomment %}
             </div>
           {% endfor %}
         {% else %}
-          <p class="no-results">Nenhum paramêtro encontrada</p>
+          <p class="no-results">Nenhum tamanho encontrada</p>
         {% endif %}
       </div>
     </body>

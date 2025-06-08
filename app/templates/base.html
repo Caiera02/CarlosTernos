@@ -371,7 +371,7 @@
     {% if request.resolver_match.url_name == 'terno_list' %}
       <h1>Catálogo de Ternos</h1>
     {% elif request.resolver_match.url_name == 'Acessorios_list' %}
-      <h1>Catálogo de Acessorios</h1>
+      <h1>Catálogo de Acessórios</h1>
     {% elif request.resolver_match.url_name == 'sapato_list' %}
       <h1>Catálogo de Sapato</h1>
     {% elif request.resolver_match.url_name == 'camisa_list' %}
@@ -404,7 +404,7 @@
             <a href=" {% url 'camisa_list' %} ">Camisa</a>
           </li>
           <li>
-            <a href="{% url 'Acessorios_list' %}">Acessorios</a>
+            <a href="{% url 'Acessorios_list' %}">Acessórios</a>
           </li>
 
           <li>
@@ -435,7 +435,7 @@
           <a href="{% url 'sapato_list' %}" class="nav-link px-2 text-body-secondary">Sapato</a>
         </li>
         <li class="nav-item">
-          <a href="{% url 'Acessorios_list' %}" class="nav-link px-2 text-body-secondary">Acessorios</a>
+          <a href="{% url 'Acessorios_list' %}" class="nav-link px-2 text-body-secondary">Acessórios</a>
         </li>
         {% comment %} <li class="nav-item">
           <a href="{% url 'camisa_list' %}" class="nav-link px-2 text-body-secondary">Camisa</a>

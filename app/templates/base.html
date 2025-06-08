@@ -9,6 +9,11 @@
 
     <style>
       header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
         background-color: rgb(33 37 41);
         color: #fff;
         text-align: center;
@@ -20,6 +25,11 @@
         font-size: 2.5rem;
         font-weight: 600;
         letter-spacing: 1px;
+      }
+      
+      #imgLogo {
+        border-radius: 50%;
+        max-width: 5%;
       }
       
       footer {
@@ -279,7 +289,7 @@
       
         #carrousel1 {
           /* border: 10px solid black;
-                                  padding: 100px;*/
+                                        padding: 100px;*/
           max-width: 200px;
           max-height: 300px;
         }
@@ -357,6 +367,7 @@
   </head>
 
   <header>
+    <div></div>
     {% if request.resolver_match.url_name == 'terno_list' %}
       <h1>Catálogo de Ternos</h1>
     {% elif request.resolver_match.url_name == 'Acessorios_list' %}
@@ -366,6 +377,7 @@
     {% elif request.resolver_match.url_name == 'camisa_list' %}
       <h1>Catálogo de Camisa</h1>
     {% endif %}
+    <img src="{% static 'IMG/Logo.jpeg' %}" alt="" id="imgLogo" />
   </header>
 
   <body>
@@ -380,7 +392,7 @@
 
       <div class="slide">
         <h2 style="text-align: center; margin-bottom: 20%;">Menu</h2>
-        <a href=" {% url "home" %} "><img style="border-radius: 50%;" src="{% static 'IMG/Logo.jpeg' %}" alt="" /></a>
+        <a href=" {% url 'home' %} "><img style="border-radius: 50%;" src="{% static 'IMG/Logo.jpeg' %}" alt="" /></a>
         <ul>
           <li>
             <a href="{% url 'terno_list' %}">Adulto</a>

@@ -11,7 +11,7 @@ def home_view(request):
 
 
 def sapato_view(request):
-    sapatos = Sapato.objects.all().order_by('titulo')
+    sapatos = Sapato.objects.all().order_by('tamanho')
     buscar = request.GET.get('search')
 
     if buscar:

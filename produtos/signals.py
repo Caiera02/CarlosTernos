@@ -1,7 +1,6 @@
 from django.db.models.signals import pre_save, post_save
 from django.dispatch import receiver
 from produtos.models import Sapato
-from googleai_api.client import gerar_descricao
 
 @receiver(pre_save, sender=Sapato)
 def sapato_pre_save(sender,instance, **kwargs):

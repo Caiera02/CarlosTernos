@@ -25,7 +25,7 @@ class TernoAdmin(admin.ModelAdmin):
 
 @admin.register(Sapato)
 class SapatoAdmin(admin.ModelAdmin):
-    list_display =('titulo','tamanho')
+    list_display =('titulo','tamanho','descricao',)
     ordering = ('titulo',)
     
 @admin.register(Camisa)

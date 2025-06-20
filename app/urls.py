@@ -7,7 +7,7 @@ from acessorios.views import acessorios_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home',home_view, name= 'home' ),
+    path('',home_view, name= 'home' ),
     path('terno/',terno_view, name='terno_list'),
     path('acessorios/',acessorios_view, name='Acessorios_list'),
     path('sapato/',sapato_view, name='sapato_list'),

@@ -17,17 +17,17 @@
       {% csrf_token %}
 
       <form method="GET" action="{% url 'sapato_list' %}">
-        <select name="search">
+        <select name="search" onchange="this.form.submit()">
           <option value="">Selecione o tamanho</option>
           <option value="37">37</option>
           <option value="38">38</option>
-          <option value="38">39</option>
+          <option value="39">39</option>
           <option value="40">40</option>
           <option value="41">41</option>
           <option value="42">42</option>
-          <option value="42">43</option>
+          <option value="43">43</option>
         </select> 
-        <button type="submit">Buscar</button>
+        <button type="submit">Buscar</button>3
       </form>
 
       <div class="car-grid">

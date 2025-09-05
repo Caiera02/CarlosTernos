@@ -10,3 +10,13 @@ def get_descricao(modelo,cor):
         contents= prompt,
     )
     return response.text
+
+def get_descricao_ternos(modelo):
+    prompt = ''' Me mostre uma descrição para esse terno {} em apenas 250 caracteres. Fale coisas boas, material,qualidade, bonitas,estilos sem emojigs'''
+    prompt = prompt.format(modelo)
+    client = genai.Client(api_key="AIzaSyDY8N-4oCQ1H7YKtgxAI8Q8_Y-FJ464Wgc")
+    response = client.models.generate_content(
+        model="gemini-2.0-flash",
+        contents= prompt,
+    )
+    return response.text

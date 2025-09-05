@@ -9,20 +9,20 @@ class Tamanho (models.Model):
         return self.numero
 
 class Terno (models.Model):
-    titulo = models.CharField(max_length=20,verbose_name= 'Titulo')
-    descricao= models.TextField(max_length=100,verbose_name = 'Texto')
+    titulo = models.CharField(max_length=50,verbose_name= 'Titulo')
+    descricao= models.TextField(max_length=250,blank= True, null=True,verbose_name = 'Texto')
     tamanho= models.ManyToManyField(Tamanho,related_name='ternos')
     img = models.ImageField(upload_to='produtos/',verbose_name='Imagem 1')
 
 class Infantil( models.Model):
-    titulo = models.CharField(max_length=20,verbose_name= 'Titulo')
-    descricao= models.TextField(max_length=100,verbose_name = 'Texto')
+    titulo = models.CharField(max_length=50,verbose_name= 'Titulo')
+    descricao= models.TextField(max_length=250,verbose_name = 'Texto')
     img = models.ImageField(upload_to='produtos/infantil',verbose_name='Imagem 1')
 
 class Sapato (models.Model):
-    titulo = models.CharField(max_length=20,verbose_name= 'Nome')
-    descricao= models.TextField(max_length=100,blank= True, null=True,verbose_name = 'Texto')
-    cor = models.CharField(max_length=20)
+    titulo = models.CharField(max_length=50,verbose_name= 'Nome')
+    descricao= models.TextField(max_length=250,blank= True, null=True,verbose_name = 'Texto')
+    cor = models.CharField(max_length=50)
     tamanho= models.IntegerField(choices=[(i,i) for i in range (37,44)])
     img = models.ImageField(upload_to='produtos/sapato',verbose_name='Imagem 1')
     
@@ -30,8 +30,8 @@ class Sapato (models.Model):
         return self.titulo
 
 class Camisa(models.Model):
-    titulo = models.CharField(max_length=20,verbose_name= 'Nome')
-    descricao= models.TextField(max_length=100,blank= True, null=True,verbose_name = 'Texto')
-    cor = models.CharField(max_length=20)
+    titulo = models.CharField(max_length=50,verbose_name= 'Nome')
+    descricao= models.TextField(max_length=250,blank= True, null=True,verbose_name = 'Texto')
+    cor = models.CharField(max_length=50)
     tamanho= models.IntegerField(choices=[(i,i) for i in range (1,8)])
     img = models.ImageField(upload_to='produtos/camisas',verbose_name='Imagem 1')
